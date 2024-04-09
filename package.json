@@ -1,0 +1,38 @@
+{
+  "name": "vue-debounce-throttle-directive",
+  "version": "1.0.0",
+  "description": "Debounce and throttle event directive for Vue.js",
+  "main": "dist/vue-debounce-throttle.js",
+  "module": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepack": "npm run lint && npm run tsc && npm run build",
+    "build": "rimraf dist && rollup -c",
+    "watch": "rollup -c -w",
+    "lint": "standard src/*.ts",
+    "lint:fix": "standard --fix src/*.ts",
+    "tsc": "rimraf src && rimraf types && tsc"
+  },
+  "keywords": [
+    "vue",
+    "directive",
+    "debounce",
+    "throttle"
+  ],
+  "author": "hruomei",
+  "license": "ISC",
+  "peerDependencies": {
+    "vue": ">= 2.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.4",
+    "@babel/preset-env": "^7.24.4",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rimraf": "^5.0.5",
+    "rollup": "^4.14.1",
+    "rollup-plugin-filesize": "^10.0.0",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "typescript": "^5.4.4"
+  }
+}
